@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
     <head>
@@ -53,3 +54,35 @@
         </form>
     </body>
 </html>
+=======
+<!-- main file, html head code goes in this file -->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- the body is rendered here -->
+    {{#if currentUser}}
+        <!-- user is logged in -->
+        {{> layout}}
+    {{else}}
+        <!-- no one is logged in, display log in page -->
+        {{> entryPage}}
+    {{/if}}
+    {{> footer}}
+</body>
+
+<template name="layout">
+    <!-- layout is only displayed when someone is logged in -->
+    <!-- anything that is displayed on all pages goes here -->
+    {{> header}}
+    {{> navbar}}
+    <!-- dynamic template -->
+    {{> Template.dynamic template=getTemplate}}
+    <!-- this area changes -->
+</template>
+
+<template name="navbar">
+    <!-- links between templates goes here -->
+    <!-- can be buttons, links, or divs -->
+</template>
+>>>>>>> master
