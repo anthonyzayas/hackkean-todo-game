@@ -11,5 +11,5 @@ Template.registerHelper("getTemplate", function () {
 });
 
 Meteor.startup(function () {
-    Session.set("page", "taskPage");
+    Session.set("page", "tasklistPage");
 });

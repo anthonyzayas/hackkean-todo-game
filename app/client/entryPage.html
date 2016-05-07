@@ -1,7 +1,9 @@
 <template name="entryPage">
+    <!-- displayed when no one is logged in -->
+    <!-- this is what is seen when people first come to the website -->
     <!-- displays either login form or signup form -->
-    <!-- TODO needs buttons for switching between the two forms -->
     {{> Template.dynamic template=getEntryForm}}
     <button id="gotoLogin">Already have an account?</button>
     <button id="gotoSignup">Don't have an account?</button>
+    {{getSomeText}}
 </template>
