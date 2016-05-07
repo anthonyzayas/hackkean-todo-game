@@ -2,6 +2,22 @@
 </head>
 <body>
     {{#if currentUser}}
+        <!-- user is logged in -->
+        {{> layout}}
     {{else}}
+        <!-- no one is logged in, display log in page -->
+        {{> entryPage}}
     {{/if}}
 </body>
+
+<template name="layout">
+    <!-- anything that is displayed on all pages goes here -->
+    {{> header}}
+    {{> navbar}}
+    <!-- dynamic template -->
+    {{> Template.dynamic template=getTemplate}}
+    <!-- this area changes -->
+</template>
+
+<template name="navbar">
+</template>
