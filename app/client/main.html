@@ -1,31 +1,38 @@
 <!-- main file, html head code goes in this file -->
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scable=no">
+    <link rel="stylesheet" href="stylesheets/main.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-    <!-- the body is rendered here -->
-    {{#if currentUser}}
-        <!-- user is logged in -->
-        {{> layout}}
-    {{else}}
-        <!-- no one is logged in, display log in page -->
-        {{> entryPage}}
-    {{/if}}
-    {{> addTask}}
-    {{> footer}}
+        <!-- the body is rendered here -->
+        {{#if currentUser}}
+            <!-- user is logged in -->
+            {{> layout}}
+        {{else}}
+            <!-- no one is logged in, display log in page -->
+            {{> entryPage}}
+        {{/if}}
+        {{> footer}}
 </body>
 
 <template name="layout">
     <!-- layout is only displayed when someone is logged in -->
     <!-- anything that is displayed on all pages goes here -->
     {{> header}}
-    {{> navbar}}
-    <!-- dynamic template -->
-    {{> Template.dynamic template=getTemplate}}
-    <!-- this area changes -->
+    <div class="container">
+        {{> navbar}}
+        <!-- dynamic template -->
+        {{> Template.dynamic template=getTemplate}}
+        <!-- this area changes -->
+    </div>
 </template>
 
 <template name="navbar">
     <!-- links between templates goes here -->
     <!-- can be buttons, links, or divs -->
+    <ul>
+        <li>verify</li>
+        <li></li>
+        <li></li>
+    </ul>
 </template>
