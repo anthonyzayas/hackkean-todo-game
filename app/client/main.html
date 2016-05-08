@@ -12,25 +12,24 @@
             <!-- no one is logged in, display log in page -->
             {{> entryPage}}
         {{/if}}
-        {{> footer}}
+            {{> footer}}
 </body>
 
 <template name="layout">
     <!-- layout is only displayed when someone is logged in -->
     <!-- anything that is displayed on all pages goes here -->
         {{> header}}
-        <div class="container-fluid">
+        <div class="container-fluid" id="main-content">
             <div class="row">
                 <div class="col-md-3">
                     {{> navbar}}
                 </div>
                 <div class="col-md-9">
-                    Todo List here
+                    <!-- dynamic template -->
+                    {{> Template.dynamic template=getTemplate}}
+                    <!-- this area changes -->
                 </div>
             </div>
-            <!-- dynamic template -->
-            {{> Template.dynamic template=getTemplate}}
-            <!-- this area changes -->
         </div>
 </template>
 
