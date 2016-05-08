@@ -1,19 +1,21 @@
 <template name="header">
     <!-- header is only displayed when people are logged in -->
-    <div class="row navbar navbar-default" id="header-navbar">
-        <div class="col-md-4 col-md-offset-1" id="header-logo">
-            My To-do List
-        </div>
-        <div class="col-xs-12 col-md-4 col-md-offset-2" id="header-profile">
-            <div id="header-profile-text">
-                <a id="myprofile">{{ currentUser.profile.name }}</a>
-                | Gold:
-                {{ currentUser.profile.score }}
-                | <a id="myfriends">Friends</a>
-                {{ currentUser.profile.friends  }}
-                | <a id="logout">Sign Out</a>
+    <div class="container-fluid">
+        <div class="row" id="header-bar">
+            <div class="col-md-4 col-md-offset-1" id="header-logo">
+                My To-do List
             </div>
+            <div class="col-xs-12 col-md-4 col-md-offset-2" id="header-profile">
+                <div id="header-profile-text">
+                    <a id="myprofile">{{ currentUser.profile.name }}</a>
+                    | Gold:
+                    {{ currentUser.profile.score }}
+                    | <a id="myfriends">Friends</a>
+                    {{ currentUser.profile.friends  }}
+                    | <a id="logout">Sign Out</a>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
         </div>
-        <div class="col-md-1"></div>
     </div>
 </template>

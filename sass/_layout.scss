@@ -1,5 +1,33 @@
-#header-navbar{
-    min-height: 30px;
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  position: relative;
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+/*---------------------------------------------*/
+
+#main-content{
+    margin-bottom: 60px;
+}
+
+// header style
+#header-bar{
+    height: 30px;
+    background-color: #f5f5f5;
+    margin-bottom: 2%;
 }
 
 #header-profile-text{
@@ -9,4 +37,24 @@
 
 #header-logo{
     margin-top: 5px;
+}
+
+
+// footer style
+#footer-bar{
+    min-height: 30px;
+}
+
+#footer-section1{
+    float: right;
+    margin-top: 5px;
+}
+
+#footer-section2{
+    margin-top: 5px;
+}
+
+#about-us{
+    display: block;
+    margin: 20px 0;
 }

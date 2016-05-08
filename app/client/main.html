@@ -12,27 +12,51 @@
             <!-- no one is logged in, display log in page -->
             {{> entryPage}}
         {{/if}}
-        {{> footer}}
+            {{> footer}}
+
 </body>
 
 <template name="layout">
     <!-- layout is only displayed when someone is logged in -->
     <!-- anything that is displayed on all pages goes here -->
-    {{> header}}
-    <div class="container">
-        {{> navbar}}
-        <!-- dynamic template -->
-        {{> Template.dynamic template=getTemplate}}
-        <!-- this area changes -->
-    </div>
+        {{> header}}
+        <div class="container-fluid" id="main-content">
+            <div class="row">
+                <div class="col-md-3">
+                    {{> navbar}}
+                </div>
+                <div class="col-md-9">
+                    <!-- dynamic template -->
+                    {{> Template.dynamic template=getTemplate}}
+                    <!-- this area changes -->
+                </div>
+            </div>
+        </div>
 </template>
 
 <template name="navbar">
     <!-- links between templates goes here -->
     <!-- can be buttons, links, or divs -->
-    <ul>
-        <li>verify</li>
-        <li></li>
-        <li></li>
-    </ul>
+    <nav role="navigation" id="navbar">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <a class="navbar-brand" href="#">Navigation</a>
+            </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse" id="navbar-list">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#">Link1</a></li>
+                <li><a href="#">Link2</a></li>
+                <li><a href="#">Link3</a></li>
+                <li><a href="#">Link4</a></li>
+                <li><a href="#">Link5</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
 </template>
