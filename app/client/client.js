@@ -5,6 +5,7 @@ import { Session } from 'meteor/session';
 Tasks = new Mongo.Collection("tasks");
 
 Meteor.subscribe("publicTasks");
+Meteor.subscribe("publicUsers");
 
 Template.registerHelper("getTemplate", function () {
     return Session.get("page");
