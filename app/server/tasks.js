@@ -6,11 +6,12 @@ Meteor.methods({
             description: taskData.description,
             completed: false,
             verified: false,
-            difficulty: taskDate.difficulty,
+            difficulty: taskData.difficulty,
             photo: taskData.photo,
             verificationDescription: undefined,
             verificationPhoto: undefined
-        })
+        });
+        console.log('addTask here');
     },
     removeTask: function (taskId) {
         var task = Tasks.findOne({_id:taskId});
