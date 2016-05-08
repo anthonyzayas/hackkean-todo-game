@@ -366,9 +366,6 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-.todolist li {
-  padding-bottom: 20px; }
-
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -6179,5 +6176,14 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+#header-navbar {
+  min-height: 30px; }
+
+#header-profile-text {
+  float: right;
+  margin-top: 5px; }
+
+#header-logo {
+  margin-top: 5px; }
 
 /*# sourceMappingURL=main.css.map */
