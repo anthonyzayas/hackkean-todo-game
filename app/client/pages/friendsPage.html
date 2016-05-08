@@ -1,4 +1,22 @@
 <template name="friendsPage">
     <!-- list of friends usually length of 0 -->
     <!-- way to search for friends -->
+    <!-- search bar for friends -->
+    <label for="friendSearchBar">Search</label>
+    <input type="text" id="friendSearchBar">
+    <!-- display friends based on search -->
+    {{#each findFriends}}
+        <div class="friend-list-item">
+            <div>{{profile.name}} {{username}}</div>
+            <button id="addFriend">I'm lonely</button>
+        </div>
+    {{/each}}
+    <!-- diplay current friends -->
+    {{#each getFriends}}
+        <!-- list item for each friend -->
+        <div class="friend-list-item">
+            <div>{{profile.name}} {{username}}</div>
+            <button id="removeFriend">This friend blows</button>
+        </div>
+    {{/each}}
 </template>
