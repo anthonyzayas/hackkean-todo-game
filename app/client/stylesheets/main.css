@@ -6176,6 +6176,25 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5; }
+
+/*---------------------------------------------*/
 #header-navbar {
   min-height: 30px; }
 
@@ -6185,5 +6204,19 @@ button.close {
 
 #header-logo {
   margin-top: 5px; }
+
+#footer-bar {
+  min-height: 30px; }
+
+#footer-section1 {
+  float: right;
+  margin-top: 5px; }
+
+#footer-section2 {
+  margin-top: 5px; }
+
+#about-us {
+  display: block;
+  margin: 20px 0; }
 
 /*# sourceMappingURL=main.css.map */
