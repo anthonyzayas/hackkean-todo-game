@@ -6221,4 +6221,11 @@ body {
   display: block;
   margin: 20px 0; }
 
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  color: #000;
+  background-color: #f5f5f5; }
+
+.nav-pills > li > a {
+  color: #000; }
+
 /*# sourceMappingURL=main.css.map */
