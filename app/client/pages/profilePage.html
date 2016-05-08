@@ -1,3 +1,15 @@
 <template name="profilePage">
     <!-- user swag page -->
+  {{#each getName}}
+    <div>{{name}}</div>
+  {{/each}}
+
+  {{#each getScore}}
+    <div>{{score}}</div>
+  {{/each}}
+
+  {{#each getBadge}}
+    <div>{{badge}}</div>
+  {{/each}}
+  
 </template>
