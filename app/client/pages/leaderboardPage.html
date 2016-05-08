@@ -1,3 +1,15 @@
 <template name="leaderboardPage">
     <!-- leaderboard between friends -->
+    {{#each getRank}}
+      <div>{{rank}}</div>
+    {{/each}}
+        
+    {{#each getName}}
+      <div>{{name}}</div>
+    {{/each}}
+
+    {{#each getScore}}
+      <div>{{score}}</div>
+    {{/each}}
+
 </template>
